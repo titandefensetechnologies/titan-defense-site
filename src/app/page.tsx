@@ -18,15 +18,26 @@ export default function Home() {
     <main className="relative min-h-screen flex flex-col">
       {/* Background Video */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
+      <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="absolute top-0 left-0 w-full h-full object-cover z-0"
+>
+  <source
+    src="/videos/hero.mp4"
+    type="video/mp4"
+    media="(min-width: 768px)"
+  />
+  <source
+    src="/videos/hero-mobile.mp4"
+    type="video/mp4"
+    media="(max-width: 767px)"
+  />
+  Your browser does not support the video tag.
+</video>
+
       </div>
 
       {/* Content Overlay */}
