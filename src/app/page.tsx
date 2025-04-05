@@ -9,7 +9,7 @@ export default function HomePage() {
         }}
       >
         <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-[50%] mt-[0.25in]">
-        <img src="/images/logo.png" alt="Titan Logo" className="h-[300px] w-auto" />
+          <img src="/images/logo.png" alt="Titan Logo" className="h-[300px] w-auto" />
         </div>
       </div>
 
@@ -23,18 +23,16 @@ export default function HomePage() {
         </ul>
       </div>
 
-      {/* Hero Video Section */}
-      <div className="relative w-full h-[75vh] overflow-hidden z-10 pt-[100px]">
-      <video
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="absolute top-0 left-0 w-full h-full object-cover z-0"
->
-  <source src="/videos/hero.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+      {/* Test Link Instead of Hero Video */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-[75vh] text-center px-4">
+        <a
+          href="/videos/hero.mp4"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xl text-blue-400 underline z-50"
+        >
+          🔗 Click here to test if hero.mp4 is working
+        </a>
       </div>
 
       {/* Footer Section */}
