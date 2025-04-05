@@ -2,18 +2,40 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="relative h-screen text-white">
-      {/* Hero Video */}
-      <video
-        className="w-full h-[75vh] object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <section className="relative w-full h-[75vh] overflow-hidden">
+    <video
+      className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      src="/videos/hero.mp4"
+      autoPlay
+      muted
+      loop
+      playsInline
+    />
+    <div className="relative z-10 w-full h-full flex flex-col justify-between">
+      {/* Header */}
+      <header className="flex justify-between items-center px-6 pt-6">
+        <img
+          src="/images/logo.png"
+          alt="Titan Defense Logo"
+          className="h-16 w-auto"
+        />
+        <nav className="space-x-6 text-white font-semibold">
+          <a href="#about">ABOUT US</a>
+          <a href="#solutions">DEFENSE SOLUTIONS</a>
+          <a href="#systems">ADVANCED SYSTEMS</a>
+          <a href="#contact">CONTACT US</a>
+        </nav>
+      </header>
+  
+      {/* Optional overlay content in center */}
+      <div className="text-white text-center pb-20 z-10">
+        <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
+          DEFENDING THE FUTURE
+        </h1>
+      </div>
+    </div>
+  </section>
+  
 
       {/* Overlay Content */}
       <div className="absolute top-0 left-0 w-full px-4 md:px-16 pt-4 flex flex-col items-center z-10">
