@@ -9,7 +9,7 @@ export default function HomePage() {
         }}
       >
         <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-[50%] mt-[0.25in]">
-          <img src="/images/logo.png" alt="Titan Logo" className="h-[300px] w-auto" />
+          <img src="/images/LOGO.png" alt="Titan Logo" className="h-[300px] w-auto" />
         </div>
       </div>
 
@@ -27,26 +27,22 @@ export default function HomePage() {
       <div className="relative w-full h-[75vh] overflow-hidden z-10 pt-[100px]">
         <video
           autoPlay
-          loop
           muted
+          loop
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
-          <source src="/videos/hero-desktop.mp4" type="video/mp4" />
+          <source src="/videos/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
 
       {/* Footer Section */}
-      <footer
-        className="bg-cover bg-center py-6 text-gray-400"
-        style={{ backgroundImage: 'url(/images/background.png)' }}
-      >
-        <div className="flex flex-wrap justify-between items-start px-6 md:px-16 gap-y-6 text-sm">
-          {/* Helpful Links */}
-          <div className="w-full sm:w-1/2 px-2">
-            <h3 className="text-white font-semibold mb-4 text-center sm:text-left">HELPFUL LINKS</h3>
-            <ul className="space-y-2 text-center sm:text-left">
+      <footer className="bg-cover bg-center py-6 text-gray-400" style={{ backgroundImage: 'url(/images/background.png)' }}>
+        <div className="flex flex-wrap justify-center gap-12 md:gap-32 px-4 md:px-16 text-sm">
+          <div className="w-full sm:w-auto text-center sm:text-left">
+            <h3 className="text-white font-semibold mb-4">HELPFUL LINKS</h3>
+            <ul className="space-y-2">
               <li>What We Do</li>
               <li>Our Capabilities</li>
               <li>Our Products</li>
@@ -54,11 +50,9 @@ export default function HomePage() {
               <li>Media Relations</li>
             </ul>
           </div>
-
-          {/* Contact Info */}
-          <div className="w-full sm:w-1/2 px-2">
-            <h3 className="text-white font-semibold mb-4 text-center sm:text-left">CONTACT US</h3>
-            <ul className="space-y-2 text-center sm:text-left">
+          <div className="w-full sm:w-auto text-center sm:text-left">
+            <h3 className="text-white font-semibold mb-4">CONTACT US</h3>
+            <ul className="space-y-2">
               <li>Suppliers</li>
               <li>Employees</li>
               <li>FAQs</li>
@@ -67,7 +61,6 @@ export default function HomePage() {
             </ul>
           </div>
         </div>
-
         <div className="mt-10 border-t border-gray-700 pt-6 text-center text-xs text-gray-500 px-6">
           © 2025 Titan Defense Technologies. All rights reserved.
         </div>
