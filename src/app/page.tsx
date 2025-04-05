@@ -8,18 +8,14 @@ export default function HomePage() {
           backgroundImage: 'url(/images/background.png)',
         }}
       >
-        <div className="absolute top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <img
-            src="/images/logo.png"
-            alt="Titan Logo"
-            className="h-[200px] w-auto sm:h-[300px]"
-          />
+        <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-[50%] mt-[0.25in]">
+          <img src="/images/logo.png" alt="Titan Logo" className="h-[300px] w-auto" />
         </div>
       </div>
 
       {/* Navigation Links */}
-      <div className="relative z-10 flex justify-center flex-wrap gap-3 px-4 py-4 bg-black text-white">
-        <ul className="flex flex-wrap justify-center gap-6 text-base sm:text-xl font-bold">
+      <div className="relative z-10 flex justify-between items-center px-4 py-2 bg-black text-white">
+        <ul className="flex flex-1 justify-evenly flex-wrap text-xl font-bold gap-y-2">
           <li><a href="#about-us" className="hover:text-gray-300">ABOUT US</a></li>
           <li><a href="#defense-solutions" className="hover:text-gray-300">DEFENSE SOLUTIONS</a></li>
           <li><a href="#advanced-systems" className="hover:text-gray-300">ADVANCED SYSTEMS</a></li>
@@ -54,8 +50,8 @@ export default function HomePage() {
 
       {/* Footer Section */}
       <footer className="bg-cover bg-center py-6 text-gray-400" style={{ backgroundImage: 'url(/images/background.png)' }}>
-        <div className="flex flex-col sm:flex-row justify-center sm:justify-evenly items-start gap-10 px-4 sm:px-12 text-sm text-center sm:text-left">
-          <div>
+        <div className="flex flex-wrap justify-center gap-12 md:gap-32 px-4 md:px-16 text-sm text-center sm:text-left">
+          <div className="w-full sm:w-auto">
             <h3 className="text-white font-semibold mb-4">HELPFUL LINKS</h3>
             <ul className="space-y-2">
               <li>What We Do</li>
@@ -65,7 +61,7 @@ export default function HomePage() {
               <li>Media Relations</li>
             </ul>
           </div>
-          <div>
+          <div className="w-full sm:w-auto">
             <h3 className="text-white font-semibold mb-4">CONTACT US</h3>
             <ul className="space-y-2">
               <li>Suppliers</li>
