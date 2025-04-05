@@ -9,18 +9,18 @@ export default function HomePage() {
     <div className="relative w-full text-white bg-black">
       {/* Hero Video Background */}
       <div className="fixed inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="w-full h-full object-cover"
-          poster="/images/background.png"
-        >
-        <source src="/videos/hero-final.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="w-full h-full object-cover"
+  poster="/images/background.png"
+>
+  <source src="/videos/hero-final.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
       </div>
 
       {/* Overlay Content */}
