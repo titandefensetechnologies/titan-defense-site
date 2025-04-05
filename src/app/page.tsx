@@ -21,11 +21,11 @@ export default function Home() {
         <Image
           src="/images/logo.png"
           alt="Titan Defense Logo"
-          width={220}
-          height={220}
+          width={isMobile ? 220 : 300}
+          height={isMobile ? 220 : 300}
           priority
         />
-        <nav className="mt-4 flex flex-wrap justify-center gap-6 text-sm font-bold">
+        <nav className={`mt-4 flex flex-wrap justify-center gap-6 font-bold ${isMobile ? 'text-sm' : 'text-xl'}`}>
           <a href="#about">ABOUT US</a>
           <a href="#solutions">DEFENSE SOLUTIONS</a>
           <a href="#systems">ADVANCED SYSTEMS</a>
@@ -40,7 +40,7 @@ export default function Home() {
           muted
           loop
           playsInline
-          className="w-full max-h-[500px] object-cover"
+          className={`w-full object-cover ${isMobile ? 'max-h-[500px]' : 'max-h-[650px]'}`}
         >
           <source src={isMobile ? '/videos/hero-mobile.mp4' : '/videos/hero.mp4'} type="video/mp4" />
         </video>
@@ -49,11 +49,12 @@ export default function Home() {
       {/* Footer */}
       <footer className="w-full bg-cover bg-center py-6 text-gray-400 relative" style={{ backgroundImage: "url(/images/background.png)" }}>
         <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
-        <div className="relative z-10 px-6 sm:px-12">
-          <div className="flex flex-wrap sm:flex-nowrap justify-center sm:justify-between items-start gap-8 text-sm">
-            <div className="sm:w-1/2 w-full">
-              <h3 className="text-white font-semibold mb-4 text-center sm:text-left">HELPFUL LINKS</h3>
-              <ul className="space-y-2 text-center sm:text-left">
+        <div className="relative z-10 px-6 sm:px-12 max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-between gap-10 text-sm">
+            {/* Helpful Links */}
+            <div className="flex-1 min-w-[150px] text-center sm:text-left">
+              <h3 className="text-white font-semibold mb-3">HELPFUL LINKS</h3>
+              <ul className="space-y-1">
                 <li>What We Do</li>
                 <li>Our Capabilities</li>
                 <li>Our Products</li>
@@ -61,9 +62,11 @@ export default function Home() {
                 <li>Media Relations</li>
               </ul>
             </div>
-            <div className="sm:w-1/2 w-full">
-              <h3 className="text-white font-semibold mb-4 text-center sm:text-left">CONTACT US</h3>
-              <ul className="space-y-2 text-center sm:text-left">
+
+            {/* Contact Info */}
+            <div className="flex-1 min-w-[150px] text-center sm:text-left">
+              <h3 className="text-white font-semibold mb-3">CONTACT US</h3>
+              <ul className="space-y-1">
                 <li>Suppliers</li>
                 <li>Employees</li>
                 <li>FAQs</li>
@@ -72,6 +75,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
+
           <div className="mt-8 border-t border-gray-700 pt-4 text-center text-xs text-gray-500">
             © 2025 Titan Defense Technologies. All rights reserved.
           </div>
