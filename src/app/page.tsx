@@ -9,7 +9,7 @@ export default function HomePage() {
         }}
       >
         <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-[50%] mt-[0.25in]">
-          <img src="/images/LOGO.png" alt="Titan Logo" className="h-[300px] w-auto" />
+        <img src="/images/logo.png" alt="Titan Logo" className="h-[300px] w-auto" />
         </div>
       </div>
 
