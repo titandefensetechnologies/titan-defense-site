@@ -1,9 +1,10 @@
-import './globals.css';
-import type { Metadata } from 'next';
+import './globals.css'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Titan Defense Technologies | Canadian Military Innovation',
-  description: 'Commanding the battlespace through next-gen warfighter systems, LoRa communications, and tactical medical innovations. Proudly built in Canada.',
+  description:
+    'Commanding the battlespace through next-gen warfighter systems, LoRa communications, and tactical medical innovations. Proudly built in Canada.',
   keywords: [
     'Titan Defense Technologies',
     'Canadian Defense Contractor',
@@ -19,7 +20,8 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.titandefensetechnologies.com'),
   openGraph: {
     title: 'Titan Defense Technologies',
-    description: 'Next-gen Canadian defense systems for the modern battlespace. Tactical innovation. Mission-critical reliability.',
+    description:
+      'Next-gen Canadian defense systems for the modern battlespace. Tactical innovation. Mission-critical reliability.',
     url: 'https://www.titandefensetechnologies.com',
     siteName: 'Titan Defense Technologies',
     images: [
@@ -35,7 +37,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Titan Defense Technologies',
-    description: 'Commanding the battlespace through innovation. Explore Canadian defense tech that leads the future.',
+    description:
+      'Commanding the battlespace through innovation. Explore Canadian defense tech that leads the future.',
     images: ['/images/logo.png'],
   },
   robots: {
@@ -44,24 +47,28 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      maxImagePreview: 'large',
-      maxVideoPreview: -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+      'max-snippet': -1,
     },
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://www.titandefensetechnologies.com" />
+        <link
+          rel="canonical"
+          href="https://www.titandefensetechnologies.com"
+        />
       </head>
       <body>{children}</body>
     </html>
-  );
+  )
 }
