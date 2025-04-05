@@ -1,59 +1,62 @@
-export default function HomePage() {
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+
+export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
-    <div className="relative w-full text-white bg-black">
-      {/* Header Section with Background Image */}
-      <div
-        className="relative w-full h-[2in] bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/images/background.png)',
-        }}
-      >
-        <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-[50%] mt-[0.25in]">
-          <img src="/images/logo.png" alt="Titan Logo" className="h-[300px] w-auto" />
-        </div>
-      </div>
-
-      {/* Navigation Links */}
-      <div className="relative z-10 flex justify-between items-center px-4 py-2 bg-black text-white">
-        <ul className="flex flex-1 justify-evenly flex-wrap text-xl font-bold gap-y-2">
-          <li><a href="#about-us" className="hover:text-gray-300">ABOUT US</a></li>
-          <li><a href="#defense-solutions" className="hover:text-gray-300">DEFENSE SOLUTIONS</a></li>
-          <li><a href="#advanced-systems" className="hover:text-gray-300">ADVANCED SYSTEMS</a></li>
-          <li><a href="#contact-us" className="hover:text-gray-300">CONTACT US</a></li>
-        </ul>
-      </div>
-
-      {/* Hero Video Section */}
-      <div className="relative w-full h-[60vh] overflow-hidden z-10">
-        {/* Desktop Video */}
+    <main className="relative min-h-screen flex flex-col">
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="hidden sm:block absolute top-0 left-0 w-full h-full object-cover"
+          className="w-full h-full object-cover"
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
-
-        {/* Mobile Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="block sm:hidden absolute top-0 left-0 w-full h-full object-cover"
-        >
-          <source src="/videos/hero-mobile.mp4" type="video/mp4" />
-        </video>
       </div>
 
-      {/* Footer Section */}
-      <footer className="bg-cover bg-center py-6 text-gray-400" style={{ backgroundImage: 'url(/images/background.png)' }}>
-        <div className="flex flex-wrap justify-center gap-12 md:gap-32 px-4 md:px-16 text-sm text-center sm:text-left">
-          <div className="w-full sm:w-auto">
-            <h3 className="text-white font-semibold mb-4">HELPFUL LINKS</h3>
-            <ul className="space-y-2">
+      {/* Content Overlay */}
+      <div className="relative z-10 flex flex-col items-center text-white text-center px-4 py-6">
+        {/* Logo */}
+        <div className="mt-6 sm:mt-12">
+          <Image
+            src="/images/logo.png"
+            alt="Titan Defense Logo"
+            width={isMobile ? 180 : 260}
+            height={isMobile ? 180 : 260}
+            className="mx-auto"
+          />
+        </div>
+
+        {/* Navigation */}
+        <nav className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm sm:text-base font-bold uppercase">
+          <Link href="#about">About Us</Link>
+          <Link href="#solutions">Defense Solutions</Link>
+          <Link href="#systems">Advanced Systems</Link>
+          <Link href="#contact">Contact Us</Link>
+        </nav>
+      </div>
+
+      {/* Footer */}
+      <footer className="mt-auto bg-black bg-opacity-80 text-gray-400 text-xs sm:text-sm px-4 py-8">
+        <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-start gap-4">
+          <div className="flex-1 min-w-[150px]">
+            <h3 className="text-white font-semibold mb-2">HELPFUL LINKS</h3>
+            <ul className="space-y-1">
               <li>What We Do</li>
               <li>Our Capabilities</li>
               <li>Our Products</li>
@@ -61,9 +64,9 @@ export default function HomePage() {
               <li>Media Relations</li>
             </ul>
           </div>
-          <div className="w-full sm:w-auto">
-            <h3 className="text-white font-semibold mb-4">CONTACT US</h3>
-            <ul className="space-y-2">
+          <div className="flex-1 min-w-[150px]">
+            <h3 className="text-white font-semibold mb-2">CONTACT US</h3>
+            <ul className="space-y-1">
               <li>Suppliers</li>
               <li>Employees</li>
               <li>FAQs</li>
@@ -72,10 +75,10 @@ export default function HomePage() {
             </ul>
           </div>
         </div>
-        <div className="mt-10 border-t border-gray-700 pt-6 text-center text-xs text-gray-500 px-6">
+        <div className="mt-6 text-center text-gray-500 border-t border-gray-700 pt-4">
           © 2025 Titan Defense Technologies. All rights reserved.
         </div>
       </footer>
-    </div>
+    </main>
   );
 }
