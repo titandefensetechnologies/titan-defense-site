@@ -18,7 +18,7 @@ export default function HomePage() {
           className="w-full h-full object-cover"
           poster="/images/background.png"
         >
-        <source src="/videos/hero-fixed.mp4" type="video/mp4" />
+        <source src="/videos/hero-final.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
