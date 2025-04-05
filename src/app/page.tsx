@@ -62,34 +62,44 @@ export default function Home() {
         </nav>
       </div>
 
-      {/* Footer */}
-      <footer className="mt-auto bg-black bg-opacity-80 text-gray-400 text-xs sm:text-sm px-4 py-8">
-        <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-start gap-4">
-          <div className="flex-1 min-w-[150px]">
-            <h3 className="text-white font-semibold mb-2">HELPFUL LINKS</h3>
-            <ul className="space-y-1">
-              <li>What We Do</li>
-              <li>Our Capabilities</li>
-              <li>Our Products</li>
-              <li>Contact Us</li>
-              <li>Media Relations</li>
-            </ul>
-          </div>
-          <div className="flex-1 min-w-[150px]">
-            <h3 className="text-white font-semibold mb-2">CONTACT US</h3>
-            <ul className="space-y-1">
-              <li>Suppliers</li>
-              <li>Employees</li>
-              <li>FAQs</li>
-              <li>Careers</li>
-              <li>Search Open Positions</li>
-            </ul>
-          </div>
-        </div>
-        <div className="mt-6 text-center text-gray-500 border-t border-gray-700 pt-4">
-          © 2025 Titan Defense Technologies. All rights reserved.
-        </div>
-      </footer>
+      <footer
+  className="relative bg-cover bg-center text-gray-400"
+  style={{ backgroundImage: 'url(/images/background.png)' }}
+>
+  <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+
+  <div className="relative z-10 py-6 px-4 sm:px-6 md:px-16">
+    <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-start gap-y-6 text-sm">
+      {/* Helpful Links */}
+      <div className="w-full sm:w-1/2 px-2 text-center sm:text-left">
+        <h3 className="text-white font-semibold mb-4">HELPFUL LINKS</h3>
+        <ul className="space-y-2">
+          <li>What We Do</li>
+          <li>Our Capabilities</li>
+          <li>Our Products</li>
+          <li>Contact Us</li>
+          <li>Media Relations</li>
+        </ul>
+      </div>
+
+      {/* Contact Info */}
+      <div className="w-full sm:w-1/2 px-2 text-center sm:text-left">
+        <h3 className="text-white font-semibold mb-4">CONTACT US</h3>
+        <ul className="space-y-2">
+          <li>Suppliers</li>
+          <li>Employees</li>
+          <li>FAQs</li>
+          <li>Careers</li>
+          <li>Search Open Positions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="mt-10 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
+      © 2025 Titan Defense Technologies. All rights reserved.
+    </div>
+  </div>
+</footer>
     </main>
   );
 }
