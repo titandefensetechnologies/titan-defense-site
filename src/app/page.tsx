@@ -25,12 +25,11 @@ export default function Home() {
           height={isMobile ? 220 : 300}
           priority
         />
-        <nav className={`mt-4 flex flex-wrap justify-center gap-6 font-bold ${isMobile ? 'text-sm' : 'text-xl'}`}>
-          <a href="#about">ABOUT US</a>
-          <a href="#solutions">DEFENSE SOLUTIONS</a>
-          <a href="#systems">ADVANCED SYSTEMS</a>
-          <a href="#contact">CONTACT US</a>
-        </nav>
+       <nav className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm sm:text-base font-bold uppercase">
+  <a href="/">HOME</a>
+  <a href="/technology">TECHNOLOGY</a>
+  <a href="/mission">MISSION</a>
+</nav>
       </header>
 
       {/* Hero Video */}
