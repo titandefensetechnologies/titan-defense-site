@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -25,11 +26,11 @@ export default function Home() {
           height={isMobile ? 220 : 300}
           priority
         />
-       <nav className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm sm:text-base font-bold uppercase">
-  <a href="/">HOME</a>
-  <a href="/technology">TECHNOLOGY</a>
-  <a href="/mission">MISSION</a>
-</nav>
+        <nav className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm sm:text-base font-bold uppercase">
+          <Link href="/">HOME</Link>
+          <Link href="/technology">TECHNOLOGY</Link>
+          <Link href="/mission">MISSION</Link>
+        </nav>
       </header>
 
       {/* Hero Video */}
