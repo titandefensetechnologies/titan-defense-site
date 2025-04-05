@@ -24,16 +24,19 @@ export default function HomePage() {
       </div>
 
       {/* Test Link Instead of Hero Video */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-[75vh] text-center px-4">
-        <a
-          href="/videos/hero.mp4"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xl text-blue-400 underline z-50"
-        >
-          🔗 Click here to test if hero.mp4 is working
-        </a>
-      </div>
+      <div className="relative w-full h-[75vh] overflow-hidden z-10 pt-[100px]">
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute top-0 left-0 w-full h-full object-cover"
+  >
+    <source src="/videos/hero.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 
       {/* Footer Section */}
       <footer className="bg-cover bg-center py-6 text-gray-400" style={{ backgroundImage: 'url(/images/background.png)' }}>
