@@ -1,47 +1,61 @@
-'use client';
-import Image from 'next/image';
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <main className="relative min-h-screen overflow-hidden text-white">
-      {/* Background Video for Desktop */}
+    <main className="relative h-screen w-screen overflow-hidden">
+      {/* Background Video */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0 hidden md:block"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/videos/hero-desktop.mp4" type="video/mp4" />
+        <source
+          src={isMobile ? "/videos/hero-mobile.mp4" : "/videos/hero-desktop.mp4"}
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
 
-      {/* Optional fallback for mobile */}
-      <div className="absolute inset-0 bg-black md:hidden z-0" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
 
-      {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4">
-        <Image
+      {/* Content */}
+      <div className="relative z-20 flex flex-col items-center justify-center h-full text-white px-4 text-center">
+        <img
           src="/images/titan-logo.png"
           alt="Titan Defense Logo"
-          width={300}
-          height={300}
-          className="mb-6"
+          className="h-28 w-auto mb-6"
         />
-        <nav className="flex flex-wrap justify-center gap-6 text-lg font-bold">
-          <a href="#about">ABOUT US</a>
-          <a href="#solutions">DEFENSE SOLUTIONS</a>
-          <a href="#advanced">ADVANCED SYSTEMS</a>
-          <a href="#contact">CONTACT US</a>
+        <nav className="flex flex-wrap justify-center gap-6 text-sm sm:text-lg font-bold">
+          <Link href="#about">ABOUT US</Link>
+          <Link href="#solutions">DEFENSE SOLUTIONS</Link>
+          <Link href="#systems">ADVANCED SYSTEMS</Link>
+          <Link href="#contact">CONTACT US</Link>
         </nav>
       </div>
 
       {/* Footer */}
-      <footer className="relative bg-black bg-opacity-80 text-gray-400 z-10">
-        <div className="max-w-6xl mx-auto py-10 px-6 grid grid-cols-1 md:grid-cols-2 gap-10 text-sm">
-          <div>
-            <h3 className="text-white font-semibold mb-4">HELPFUL LINKS</h3>
-            <ul className="space-y-2">
+      <footer className="absolute bottom-0 w-full text-gray-400 bg-black bg-opacity-80 z-30 py-6">
+        <div className="flex flex-wrap justify-center md:justify-between gap-y-6 px-4 md:px-16 text-sm">
+          {/* Helpful Links */}
+          <div className="w-full md:w-1/2 px-4">
+            <h3 className="text-white font-semibold mb-4 text-center md:text-left">HELPFUL LINKS</h3>
+            <ul className="space-y-2 text-center md:text-left">
               <li>What We Do</li>
               <li>Our Capabilities</li>
               <li>Our Products</li>
@@ -49,9 +63,11 @@ export default function Home() {
               <li>Media Relations</li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-white font-semibold mb-4">CONTACT US</h3>
-            <ul className="space-y-2">
+
+          {/* Contact Info */}
+          <div className="w-full md:w-1/2 px-4">
+            <h3 className="text-white font-semibold mb-4 text-center md:text-left">CONTACT US</h3>
+            <ul className="space-y-2 text-center md:text-left">
               <li>Suppliers</li>
               <li>Employees</li>
               <li>FAQs</li>
@@ -60,7 +76,8 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="text-center text-xs text-gray-500 border-t border-gray-700 py-4">
+
+        <div className="mt-10 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
           © 2025 Titan Defense Technologies. All rights reserved.
         </div>
       </footer>
