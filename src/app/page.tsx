@@ -1,71 +1,72 @@
-export default function HomePage() {
+import Image from 'next/image'
+
+export default function Home() {
   return (
-    <div className="relative w-full text-white bg-black">
-      {/* Header Section with Background Image */}
-      <div
-        className="relative w-full h-[2in] bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/images/background.png)',
-        }}
+    <main className="relative h-screen text-white">
+      {/* Hero Video */}
+      <video
+        className="w-full h-[75vh] object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
       >
-        <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-[50%] mt-[0.25in]">
-          <img src="/images/logo.png" alt="Titan Logo" className="h-[300px] w-auto" />
-        </div>
+        <source src="/videos/hero.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Overlay Content */}
+      <div className="absolute top-0 left-0 w-full px-4 md:px-16 pt-4 flex flex-col items-center z-10">
+        <Image
+          src="/images/LOGO.png"
+          alt="Titan Defense Logo"
+          width={250}
+          height={250}
+          className="mb-4"
+        />
+        <nav className="flex flex-wrap justify-center gap-6 font-bold text-sm md:text-base">
+          <a href="#about" className="hover:text-gray-300">ABOUT US</a>
+          <a href="#solutions" className="hover:text-gray-300">DEFENSE SOLUTIONS</a>
+          <a href="#systems" className="hover:text-gray-300">ADVANCED SYSTEMS</a>
+          <a href="#contact" className="hover:text-gray-300">CONTACT US</a>
+        </nav>
       </div>
 
-      {/* Navigation Links */}
-      <div className="relative z-10 flex justify-between items-center px-4 py-2 bg-black text-white">
-        <ul className="flex flex-1 justify-evenly text-xl font-bold">
-          <li><a href="#about-us" className="hover:text-gray-300">ABOUT US</a></li>
-          <li><a href="#defense-solutions" className="hover:text-gray-300">DEFENSE SOLUTIONS</a></li>
-          <li><a href="#advanced-systems" className="hover:text-gray-300">ADVANCED SYSTEMS</a></li>
-          <li><a href="#contact-us" className="hover:text-gray-300">CONTACT US</a></li>
-        </ul>
-      </div>
+      {/* Footer */}
+      <footer className="relative bg-cover bg-center text-gray-400" style={{ backgroundImage: 'url(/images/background.png)' }}>
+        <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+        <div className="relative z-10 py-6 px-4 sm:px-6 md:px-16">
+          <div className="flex flex-col md:flex-row justify-center items-start md:items-start gap-10 text-sm text-center md:text-left">
+            {/* Helpful Links */}
+            <div>
+              <h3 className="text-white font-semibold mb-4">HELPFUL LINKS</h3>
+              <ul className="space-y-2">
+                <li>What We Do</li>
+                <li>Our Capabilities</li>
+                <li>Our Products</li>
+                <li>Contact Us</li>
+                <li>Media Relations</li>
+              </ul>
+            </div>
 
-      {/* Test Link Instead of Hero Video */}
-      <div className="relative w-full h-[75vh] overflow-hidden z-10 pt-[100px]">
-  <video
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="absolute top-0 left-0 w-full h-full object-cover"
-  >
-    <source src="/videos/hero.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
-
-
-      {/* Footer Section */}
-      <footer className="bg-cover bg-center py-6 text-gray-400" style={{ backgroundImage: 'url(/images/background.png)' }}>
-        <div className="flex flex-wrap justify-center gap-12 md:gap-32 px-4 md:px-16 text-sm">
-          <div className="w-full sm:w-auto text-center sm:text-left">
-            <h3 className="text-white font-semibold mb-4">HELPFUL LINKS</h3>
-            <ul className="space-y-2">
-              <li>What We Do</li>
-              <li>Our Capabilities</li>
-              <li>Our Products</li>
-              <li>Contact Us</li>
-              <li>Media Relations</li>
-            </ul>
+            {/* Contact Info */}
+            <div>
+              <h3 className="text-white font-semibold mb-4">CONTACT US</h3>
+              <ul className="space-y-2">
+                <li>Suppliers</li>
+                <li>Employees</li>
+                <li>FAQs</li>
+                <li>Careers</li>
+                <li>Search Open Positions</li>
+              </ul>
+            </div>
           </div>
-          <div className="w-full sm:w-auto text-center sm:text-left">
-            <h3 className="text-white font-semibold mb-4">CONTACT US</h3>
-            <ul className="space-y-2">
-              <li>Suppliers</li>
-              <li>Employees</li>
-              <li>FAQs</li>
-              <li>Careers</li>
-              <li>Search Open Positions</li>
-            </ul>
+
+          <div className="mt-10 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
+            © 2025 Titan Defense Technologies. All rights reserved.
           </div>
-        </div>
-        <div className="mt-10 border-t border-gray-700 pt-6 text-center text-xs text-gray-500 px-6">
-          © 2025 Titan Defense Technologies. All rights reserved.
         </div>
       </footer>
-    </div>
-  );
+    </main>
+  )
 }
