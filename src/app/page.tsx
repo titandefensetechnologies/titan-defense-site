@@ -44,7 +44,7 @@ export default function HomePage() {
           playsInline
           className="block sm:hidden absolute top-0 left-0 w-full h-full object-cover"
         >
-          <source src="/videos/Hero-Mobile.mp4" type="video/mp4" />
+          <source src="/videos/hero-mobile.mp4" type="video/mp4" />
         </video>
       </div>
 
