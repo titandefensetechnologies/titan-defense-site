@@ -13,19 +13,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="bg-black text-white">
         {/* Header */}
-<header className="w-full flex flex-col items-center py-6 bg-black text-white">
-  <Image
-    src="/images/logo.png"
-    alt="Titan Defense Logo"
-    width={300}
-    height={300}
-    priority
-  />
-  <nav className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm sm:text-base font-bold uppercase">
-    <Link href="/">HOME</Link>
-    <Link href="/technology">TECHNOLOGY</Link>
-    <Link href="/mission">MISSION</Link>
-  </nav>
+        <header className="w-full flex flex-col items-center py-6 bg-black text-white">
+  <div className="w-full max-w-6xl flex flex-col items-center">
+    <Image
+      src="/images/logo.png"
+      alt="Titan Defense Logo"
+      width={isMobile ? 220 : 320}
+      height={isMobile ? 220 : 320}
+      priority
+    />
+    <nav className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm sm:text-base font-bold uppercase">
+      <Link href="/">HOME</Link>
+      <Link href="/technology">TECHNOLOGY</Link>
+      <Link href="/mission">MISSION</Link>
+    </nav>
+  </div>
 </header>
 
         <main>{children}</main>
