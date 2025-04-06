@@ -1,12 +1,10 @@
-'use client'
-
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
-import HeroVideo from "./HeroVideo"; // ✅ fixed import path
-import { useEffect, useState } from "react";
+import HeroVideo from "./HeroVideo"; // correct relative import
+// Force redeploy
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,7 +40,7 @@ export default function RootLayout({
         {/* Hero Section */}
         <HeroVideo />
 
-        {/* Main content */}
+        {/* Main Content */}
         <main>{children}</main>
 
         {/* Footer */}
