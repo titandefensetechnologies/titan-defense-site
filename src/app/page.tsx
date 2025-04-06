@@ -13,7 +13,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-between text-white bg-black">
+    <div className="flex flex-col items-center justify-between text-white bg-black">
       {/* Hero Video */}
       <div className="w-full relative overflow-hidden">
         <video
@@ -21,7 +21,9 @@ export default function Home() {
           muted
           loop
           playsInline
-          className={`w-full object-cover ${isMobile ? 'max-h-[500px]' : 'max-h-[750px]'}`}
+          className={`w-full object-cover ${
+            isMobile ? 'min-h-[600px]' : 'min-h-[750px]'
+          }`}
         >
           <source
             src={isMobile ? '/videos/hero-mobile.mp4' : '/videos/hero.mp4'}
