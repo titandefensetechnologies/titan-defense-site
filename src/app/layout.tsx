@@ -1,9 +1,12 @@
+'use client'
+
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
-import HeroVideo from "@/components/HeroVideo";
+import HeroVideo from "./HeroVideo"; // ✅ fixed import path
+import { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,10 +39,10 @@ export default function RootLayout({
           </nav>
         </header>
 
-        {/* Fixed Hero Section */}
+        {/* Hero Section */}
         <HeroVideo />
 
-        {/* Main Content */}
+        {/* Main content */}
         <main>{children}</main>
 
         {/* Footer */}
@@ -66,6 +69,7 @@ export default function RootLayout({
               </ul>
             </div>
           </div>
+
           <div className="text-center py-4 border-t border-white/20 text-xs">
             © 2025 Titan Defense Technologies. All rights reserved.
           </div>
