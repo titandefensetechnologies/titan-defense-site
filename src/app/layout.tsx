@@ -24,7 +24,7 @@ export default function RootLayout({
         <header className="w-full py-4 flex flex-col items-center justify-center bg-black z-50">
           <Image
             src="/images/logo.png"
-            alt="Titan Defense Logo"
+            alt="Titan Defense Logo offical"
             width={240}
             height={80}
             className="mb-2 object-contain"
@@ -36,6 +36,7 @@ export default function RootLayout({
           </nav>
         </header>
 
+<<<<<<< HEAD
         <section className="relative w-full h-screen overflow-hidden">
           {/* Mobile Video */}
           <video
@@ -60,6 +61,8 @@ export default function RootLayout({
           </video>
         </section>
 
+=======
+>>>>>>> stable-working-version
         <main>{children}</main>
 
         <footer className="relative mt-12 text-sm text-white bg-black z-50">
