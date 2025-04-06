@@ -1,9 +1,10 @@
+// app/layout.tsx
+
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
-import HeroClientWrapper from "./HeroClientWrapper"; // ✅ your wrapper name
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,10 +37,7 @@ export default function RootLayout({
           </nav>
         </header>
 
-        {/* Dynamically loaded hero video */}
-        <HeroClientWrapper />
-
-        {/* Main content */}
+        {/* Main Content */}
         <main>{children}</main>
 
         {/* Footer */}
