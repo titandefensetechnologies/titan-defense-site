@@ -30,20 +30,14 @@ export default function RootLayout({
             height={60}
             className="mb-2 object-contain"
           />
-          <nav className="flex space-x-6 text-sm uppercase tracking-wide">
-            <Link href="/" className="text-white hover:text-blue-400">
-              Home
-            </Link>
-            <Link href="/technology" className="text-white hover:text-blue-400">
-              Technology
-            </Link>
-            <Link href="/mission" className="text-white hover:text-blue-400">
-              Mission
-            </Link>
+          <nav className="flex space-x-6 text-white text-sm uppercase tracking-wide">
+            <Link href="/">Home</Link>
+            <Link href="/technology">Technology</Link>
+            <Link href="/mission">Mission</Link>
           </nav>
         </header>
 
-        {/* Main content */}
+        {/* Page content */}
         <main>{children}</main>
 
         {/* Footer */}
@@ -73,18 +67,4 @@ export default function RootLayout({
               <ul className="space-y-2">
                 <li><Link href="#">Suppliers</Link></li>
                 <li><Link href="#">Employees</Link></li>
-                <li><Link href="#">FAQs</Link></li>
-                <li><Link href="#">Careers</Link></li>
-                <li><Link href="#">Search Open Positions</Link></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center py-4 border-t border-white/20 text-xs">
-            © 2025 Titan Defense Technologies. All rights reserved.
-          </div>
-        </footer>
-      </body>
-    </html>
-  );
-}
+                <li><Link
