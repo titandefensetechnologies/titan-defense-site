@@ -43,16 +43,8 @@ export default function RootLayout({
         <main>{children}</main>
 
         {/* Footer */}
-        <footer className="relative mt-12 text-sm text-white z-50">
-          <div className="absolute inset-0 bg-black opacity-80 z-[-1]">
-            <Image
-              src="/images/footer-bg.jpg"
-              alt="Footer Background"
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-
+        <footer className="relative mt-12 text-sm text-white bg-black z-50">
+          
           <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-lg font-semibold mb-4">Helpful Links</h3>
