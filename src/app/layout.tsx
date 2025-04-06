@@ -39,27 +39,31 @@ export default function RootLayout({
 
         {/* Hero Section */}
         <section className="relative w-full h-screen overflow-hidden">
-          {/* Mobile Video Only */}
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="block md:hidden w-full h-full object-cover absolute top-0 left-0"
-          >
-            <source src="/videos/Hero-Mobile.mp4" type="video/mp4" />
-          </video>
+          {/* Mobile Video */}
+          <div className="block md:hidden absolute top-0 left-0 w-full h-full z-0">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/videos/Hero-Mobile.mp4" type="video/mp4" />
+            </video>
+          </div>
 
-          {/* Desktop Video Only */}
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="hidden md:block w-full h-full object-cover absolute top-0 left-0"
-          >
-            <source src="/videos/hero.mp4" type="video/mp4" />
-          </video>
+          {/* Desktop Video */}
+          <div className="hidden md:block absolute top-0 left-0 w-full h-full z-0">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/videos/hero.mp4" type="video/mp4" />
+            </video>
+          </div>
         </section>
 
         {/* Main content */}
