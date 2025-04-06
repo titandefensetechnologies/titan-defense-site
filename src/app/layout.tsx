@@ -11,11 +11,6 @@ import { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Titan Defense Technologies",
-  description: "Canadian defense innovation at its finest.",
-};
-
 export default function RootLayout({
   children,
 }: {
