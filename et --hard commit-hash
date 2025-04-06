@@ -1,0 +1,281 @@
+[33mcommit bb1c38fa1d9decd7d6e1459a670fa77f1c3db417[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 16:06:59 2025 -0400
+
+    Fix mobile layout: logo scaling, nav spacing, and footer columns
+
+[33mcommit 65d699d939ff3241f80afd19dc6071b0d2429f77[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 15:59:56 2025 -0400
+
+    Re-encoded hero.mp4 for compatibility
+
+[33mcommit 2b5111c17699c6ef8692254e5acb33a3c11c2be3[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 15:47:30 2025 -0400
+
+    Fix hero video scaling and responsive footer layout
+
+[33mcommit df59adc7a59f115cd3b80614fa64ee53944e59b6[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 15:43:29 2025 -0400
+
+    Fix hero video casing and restore logo layout
+
+[33mcommit e3f95340a5a7679ebe80b4b2a86119864e2f7fcd[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 15:40:54 2025 -0400
+
+    Mobile fixes: logo scaling, nav wrapping, mobile hero video
+
+[33mcommit 366d8f645666cf884fba7776badf666ba328d579[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 15:31:09 2025 -0400
+
+    Re-encode and re-add hero.mp4 for proper playback
+
+[33mcommit 5a1fcf7a7a7f4e997b15d5b2e26b07c8f97d34c6[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 15:11:16 2025 -0400
+
+    Restore original layout with 75vh hero video
+
+[33mcommit 51440830c4ec66f533ad7689d17c9b0e07d4b122[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 15:08:19 2025 -0400
+
+    Fix video overlapping header by adjusting layout and height
+
+[33mcommit 193743925948caca8eb13d1951c8e67e0ef8e189[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 15:06:05 2025 -0400
+
+    Fix video overlapping header by adjusting layout and height
+
+[33mcommit d294d43d60ee9a100f16ced1aea60b3ab8ef9edc[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 15:03:23 2025 -0400
+
+    Update hero video height to 75vh for better layout
+
+[33mcommit c751e9213023e56cfe2b79ab6ae69b690813cbab[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 14:59:35 2025 -0400
+
+    Restore hero background video with working playback
+
+[33mcommit abc1bca2a785c12949d1cf95b1a1a65f1ee63cbf[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 14:56:54 2025 -0400
+
+    Re-encoded hero.mp4 without audio track for autoplay compatibility
+
+[33mcommit 4f1b2aa0649ea6ee9f62f22269ecaa5c3e117b55[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 14:45:00 2025 -0400
+
+    Add hero.mp4 test link to confirm video visibility
+
+[33mcommit 85e59f88cbe5ff9e72cd8d40b439c91d4afd57f6[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 14:39:56 2025 -0400
+
+    Remove .gitattributes and re-add hero.mp4 without LFS
+
+[33mcommit afee8b6a903808eac84c883f098e0c464559e322[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 14:29:24 2025 -0400
+
+    Add hero.mp4 video for homepage
+
+[33mcommit 9d43fdf0e46fae8b34600588c04a07c36a1f5156[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 14:23:55 2025 -0400
+
+    Correct video path to public/videos/hero.mp4
+
+[33mcommit aa799114f6198ce1584cae9ea5311cc5311aaff4[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 14:15:42 2025 -0400
+
+    Fix logo filename casing
+
+[33mcommit 93f7d298691031bc471852fb0b8c31cd366f3367[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 14:12:58 2025 -0400
+
+    Final clean layout: working hero video, logo, and footer
+
+[33mcommit 88fa98cd92c0e3361d75171bb93dd880ebca6570[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 14:03:25 2025 -0400
+
+    Restore homepage layout to working version from last night
+
+[33mcommit 86b5d59bd3f0cc9c2e90c9b588c4f9718a80c931[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 10:20:03 2025 -0400
+
+    Fix logo filename to match code
+
+[33mcommit 206192dd4826ad331bb17e9cc8a66487106db740[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 10:15:04 2025 -0400
+
+    Fix video, logo, and footer layout
+
+[33mcommit 8f2bc83486a966d84af05c5dffcf9b75b8ca4a8f[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 10:10:24 2025 -0400
+
+    Fix homepage video and footer layout
+
+[33mcommit 5abb90176371a7a0d2215165e55e4442a5c532d0[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 10:07:08 2025 -0400
+
+    Ensure video autoplay compatibility
+
+[33mcommit 6bac3890a51f13e310f9200d304d65227bffde4b[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 10:02:47 2025 -0400
+
+    Cleanup old folder files and prep new video
+
+[33mcommit 1276c82531d2394cae0af77f98bd2f0e0f0b215d[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 10:01:55 2025 -0400
+
+    Fix homepage layout and video, restore footer columns
+
+[33mcommit 21156b882f98dd81e2daf857068d641c9ba00a6a[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 09:57:46 2025 -0400
+
+    Add backup.zip to .gitignore
+
+[33mcommit 1d72c12b17842ac033e06b991cf77de813967bf5[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 09:56:40 2025 -0400
+
+    Permanently ignore backup.zip
+
+[33mcommit 9e5c57497b358eb3447924e6ae1d948a79c2cabc[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 09:36:43 2025 -0400
+
+    Clean up tracked hero.mp4 from deleted New folder
+
+[33mcommit e29c753d2018a4e64b2a55424d110f8912889a02[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 09:32:27 2025 -0400
+
+    Fully remove backup.zip and old video refs
+
+[33mcommit 967141aee79fa085178673cf829d97ba9f973a31[m
+Author: justin <j.anhalt@live.com>
+Date:   Sat Apr 5 09:13:03 2025 -0400
+
+    Add hero-desktop video and update homepage
+
+[33mcommit 5b256d9c60658e80553cdfef56d8ff7f55f1ffe1[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 23:51:35 2025 -0400
+
+    Final working hero video - verified across all devices
+
+[33mcommit 975269fb84966dc1bb20fc08e863bcc6f3f88e57[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 23:30:49 2025 -0400
+
+    Use final encoded video that works across all devices
+
+[33mcommit 3aa6f236b4efb1094b604cee90839953e80c2647[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 23:20:04 2025 -0400
+
+    Update hero video source to hero-fixed.mp4
+
+[33mcommit efd35c056c4509e0781a16fe7fbf7fca59998bec[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 23:18:40 2025 -0400
+
+    Add fixed hero video for cross-browser playback
+
+[33mcommit 22756bc473b376c3015c59f21c5ca12ac23837d4[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 23:06:33 2025 -0400
+
+    Update homepage with working video and mobile layout
+
+[33mcommit 53efb5a20cd0f905291b46071e57c0d0b233906e[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 21:46:46 2025 -0400
+
+    Remove backup ZIP again before deployment
+
+[33mcommit e500a66397390296170c1526ad0708361fee366d[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 21:45:59 2025 -0400
+
+    Fix SEO metadata robots properties
+
+[33mcommit ec45ba004d7a0c8f8736fa37b118b1eb32798b77[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 17:00:36 2025 -0400
+
+    Remove large backup zip from Git history
+
+[33mcommit 869c698b5f8bf47bf9bbd865567ce6beb70e1f30[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 15:46:22 2025 -0400
+
+    Track videos with Git LFS
+
+[33mcommit c72eac97f047025dd7afca361039e4d6856f1d4f[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 15:44:58 2025 -0400
+
+    Moved Next.js app to repo root for Vercel deploy
+
+[33mcommit 0006ad025cb7acbdad3aade8909f081c1c35989a[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 14:17:02 2025 -0400
+
+    fix invalid robots property in layout.tsx
+
+[33mcommit 2ef3ead7bb886f652b20f1d509c5b074d74fab16[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 13:56:46 2025 -0400
+
+    initial commit with working Next.js site
+
+[33mcommit b73b8a8f2dcfdae1eaa879eeda8521f3c0cb3b68[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 06:07:55 2025 -0400
+
+    add SEO metadata for Titan Defense
+
+[33mcommit 4618ee99863104a68b755b24460d2d3c5554d67b[m
+Author: justin <j.anhalt@live.com>
+Date:   Fri Apr 4 00:00:22 2025 -0400
+
+    add CNAME for custom domain
+
+[33mcommit a8138f78aded081644b9a290d83b909fec2c7933[m
+Author: justin <j.anhalt@live.com>
+Date:   Thu Apr 3 23:38:13 2025 -0400
+
+    initial commit for Titan Defense Tehcnologies website
+
+[33mcommit 35f072a32df55e5ec06d973247764703a43ac593[m
+Author: titandefensetechnologies <j.anhalt@live.com>
+Date:   Thu Apr 3 09:02:25 2025 -0400
+
+    Create CNAME
+
+[33mcommit fdc128a6dab09693c25781ac4fd9e12f52920af4[m
+Author: titandefensetechnologies <j.anhalt@live.com>
+Date:   Thu Apr 3 09:01:49 2025 -0400
+
+    Create index.html
