@@ -3,8 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
-import HeroVideo from "./HeroVideo"; // correct relative import
-// Force redeploy
+import HeroVideo from "./HeroVideo"; // client component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,7 +36,7 @@ export default function RootLayout({
           </nav>
         </header>
 
-        {/* Hero Section */}
+        {/* Hero Video */}
         <HeroVideo />
 
         {/* Main Content */}
