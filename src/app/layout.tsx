@@ -31,10 +31,10 @@ export default function RootLayout({
             className="mb-2 object-contain"
           />
           <nav className="flex space-x-6 text-white text-sm uppercase tracking-wide">
-            <Link href="/">Home</Link>
-            <Link href="/technology">Technology</Link>
-            <Link href="/mission">Mission</Link>
-          </nav>
+  <Link href="/" className="hover:text-blue-400">Home</Link>
+  <Link href="/technology" className="hover:text-blue-400">Technology</Link>
+  <Link href="/mission" className="hover:text-blue-400">Mission</Link>
+</nav>
         </header>
 
         {/* Main content */}
