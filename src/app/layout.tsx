@@ -39,8 +39,8 @@ export default function RootLayout({
 
         {/* Hero Section */}
         <section className="relative w-full h-screen overflow-hidden">
-          {/* Mobile Video */}
-          <div className="block md:hidden absolute top-0 left-0 w-full h-full z-0">
+          {/* Mobile Video (only below md) */}
+          <div className="absolute inset-0 block md:hidden pointer-events-none z-0">
             <video
               autoPlay
               muted
@@ -52,8 +52,8 @@ export default function RootLayout({
             </video>
           </div>
 
-          {/* Desktop Video */}
-          <div className="hidden md:block absolute top-0 left-0 w-full h-full z-0">
+          {/* Desktop Video (only md and up) */}
+          <div className="absolute inset-0 hidden md:block pointer-events-none z-0">
             <video
               autoPlay
               muted
