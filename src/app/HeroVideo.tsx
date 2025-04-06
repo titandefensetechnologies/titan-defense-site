@@ -1,23 +1,16 @@
-'use client'
+'use client';
 
 import { useState, useEffect } from "react";
 
 export default function HeroVideo() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [videoSrc, setVideoSrc] = useState<string | null>(null);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize(); // initial check
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const isMobile = window.innerWidth < 768;
+    setVideoSrc(isMobile ? "/videos/hero-mobile.mp4" : "/videos/hero.mp4");
   }, []);
 
-  const videoSrc = isMobile
-    ? "/videos/hero-mobile.mp4"
-    : "/videos/hero.mp4";
+  if (!videoSrc) return null; // avoid server preload and flicker
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
