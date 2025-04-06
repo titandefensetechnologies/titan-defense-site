@@ -20,31 +20,56 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body className={`${inter.className} bg-black text-white`}>
         {/* Header */}
-       {/* Header */}
-<header className="w-full py-4 flex flex-col items-center justify-center bg-black z-50">
-  <Image
-    src="/images/logo.png"
-    alt="Titan Defense Logo"
-    width={240}
-    height={80}
-    className="mb-2 object-contain"
-  />
-  <nav className="flex space-x-8 text-white text-xl font-bold uppercase tracking-wide">
-    <Link href="/">Home</Link>
-    <Link href="/technology">Technology</Link>
-    <Link href="/mission">Mission</Link>
-  </nav>
-</header>
+        <header className="w-full py-4 flex flex-col items-center justify-center bg-black z-50">
+          <Image
+            src="/images/logo.png"
+            alt="Titan Defense Logo"
+            width={240}
+            height={80}
+            className="mb-2 object-contain"
+          />
+          <nav className="flex space-x-6 text-white text-lg font-bold uppercase tracking-wide md:text-base">
+            <Link href="/">Home</Link>
+            <Link href="/technology">Technology</Link>
+            <Link href="/mission">Mission</Link>
+          </nav>
+        </header>
 
+        {/* Hero Section with Responsive Video */}
+        <section className="relative w-full h-[90vh] overflow-hidden">
+          {/* Mobile Video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="block md:hidden w-full h-full object-cover"
+          >
+            <source src="/videos/Hero-Mobile.mp4" type="video/mp4" />
+          </video>
 
-        {/* Main content */}
+          {/* Desktop Video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="hidden md:block w-full h-full object-cover"
+          >
+            <source src="/videos/hero.mp4" type="video/mp4" />
+          </video>
+        </section>
+
+        {/* Main Content */}
         <main>{children}</main>
 
         {/* Footer */}
         <footer className="relative mt-12 text-sm text-white bg-black z-50">
-          
           <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-lg font-semibold mb-4">Helpful Links</h3>
