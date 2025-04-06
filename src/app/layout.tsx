@@ -1,9 +1,11 @@
+import dynamic from "next/dynamic";
+
+// Other imports...
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
-import HeroVideo from "./HeroVideo"; // client component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +13,9 @@ export const metadata: Metadata = {
   title: "Titan Defense Technologies",
   description: "Canadian defense innovation at its finest.",
 };
+
+// ⬇️ Dynamic import: only rendered on client, no server preload at all
+const HeroVideo = dynamic(() => import("./HeroVideoClient"), { ssr: false });
 
 export default function RootLayout({
   children,
@@ -36,13 +41,11 @@ export default function RootLayout({
           </nav>
         </header>
 
-        {/* Hero Video */}
+        {/* Dynamically loaded hero video (client-only) */}
         <HeroVideo />
 
-        {/* Main Content */}
         <main>{children}</main>
 
-        {/* Footer */}
         <footer className="relative mt-12 text-sm text-white bg-black z-50">
           <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
