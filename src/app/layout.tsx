@@ -39,7 +39,7 @@ export default function RootLayout({
 
         {/* Hero Section */}
         <section className="relative w-full h-screen overflow-hidden">
-          {/* Mobile Video */}
+          {/* Mobile Video Only */}
           <video
             autoPlay
             muted
@@ -50,7 +50,7 @@ export default function RootLayout({
             <source src="/videos/Hero-Mobile.mp4" type="video/mp4" />
           </video>
 
-          {/* Desktop Video */}
+          {/* Desktop Video Only */}
           <video
             autoPlay
             muted
