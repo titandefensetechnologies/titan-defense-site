@@ -3,10 +3,14 @@
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
-import HeroVideo from "@/components/HeroVideo"; // ⬅️ import the new client component
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata = {
+  title: "Titan Defense Technologies",
+  description: "Canadian defense innovation at its finest.",
+};
 
 export default function RootLayout({
   children,
@@ -36,7 +40,29 @@ export default function RootLayout({
         </header>
 
         {/* Hero Video Section */}
-        <HeroVideo />
+        <section className="relative w-full h-screen overflow-hidden">
+          {/* Mobile */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="block md:hidden absolute top-0 left-0 w-full h-full object-cover z-0"
+          >
+            <source src="/videos/hero-mobile.mp4" type="video/mp4" />
+          </video>
+
+          {/* Desktop */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="hidden md:block absolute top-0 left-0 w-full h-full object-cover z-0"
+          >
+            <source src="/videos/hero.mp4" type="video/mp4" />
+          </video>
+        </section>
 
         {/* Main Content */}
         <main>{children}</main>
