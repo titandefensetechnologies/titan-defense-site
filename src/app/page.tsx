@@ -1,4 +1,5 @@
 'use client';
+// Force redeploy to remove ghost routes
 
 export default function HomePage() {
   return (
