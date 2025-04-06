@@ -22,20 +22,22 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-black text-white`}>
         {/* Header */}
-        <header className="w-full py-4 flex flex-col items-center justify-center bg-black z-50">
-          <Image
-            src="/images/logo.png"
-            alt="Titan Defense Logo"
-            width={180}
-            height={60}
-            className="mb-2 object-contain"
-          />
-          <nav className="flex space-x-6 text-white text-sm uppercase tracking-wide">
-            <Link href="/">Home</Link>
-            <Link href="/technology">Technology</Link>
-            <Link href="/mission">Mission</Link>
-          </nav>
-        </header>
+       {/* Header */}
+<header className="w-full py-4 flex flex-col items-center justify-center bg-black z-50">
+  <Image
+    src="/images/logo.png"
+    alt="Titan Defense Logo"
+    width={240}
+    height={80}
+    className="mb-2 object-contain"
+  />
+  <nav className="flex space-x-8 text-white text-xl font-bold uppercase tracking-wide">
+    <Link href="/">Home</Link>
+    <Link href="/technology">Technology</Link>
+    <Link href="/mission">Mission</Link>
+  </nav>
+</header>
+
 
         {/* Main content */}
         <main>{children}</main>
