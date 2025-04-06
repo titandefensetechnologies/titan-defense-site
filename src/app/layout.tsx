@@ -7,11 +7,6 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Titan Defense Technologies",
-  description: "Canadian defense innovation at its finest.",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -19,9 +14,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
       <body className={`${inter.className} bg-black text-white`}>
         {/* Header */}
         <header className="w-full py-4 flex flex-col items-center justify-center bg-black z-50">
@@ -64,7 +56,6 @@ export default function RootLayout({
           </video>
         </section>
 
-        {/* Main Content */}
         <main>{children}</main>
 
         {/* Footer */}
