@@ -1,12 +1,10 @@
-// app/layout.tsx
-
-'use client';
+// src/app/layout.tsx
 
 import "./globals.css";
-import { Inter } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import HeroVideo from "@/components/HeroVideo"; // ⬅️ import the new client component
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,15 +13,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize(); // Run on load
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <html lang="en">
       <head>
@@ -46,30 +35,8 @@ export default function RootLayout({
           </nav>
         </header>
 
-        {/* Hero Section - Conditionally Rendered Video */}
-        <section className="relative w-full h-screen overflow-hidden">
-          {isMobile ? (
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="absolute top-0 left-0 w-full h-full object-cover z-0"
-            >
-              <source src="/videos/Hero-Mobile.mp4" type="video/mp4" />
-            </video>
-          ) : (
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="absolute top-0 left-0 w-full h-full object-cover z-0"
-            >
-              <source src="/videos/hero.mp4" type="video/mp4" />
-            </video>
-          )}
-        </section>
+        {/* Hero Video Section */}
+        <HeroVideo />
 
         {/* Main Content */}
         <main>{children}</main>
