@@ -30,11 +30,17 @@ export default function RootLayout({
             height={60}
             className="mb-2 object-contain"
           />
-          <nav className="flex space-x-6 text-white text-sm uppercase tracking-wide">
-  <Link href="/" className="hover:text-blue-400">Home</Link>
-  <Link href="/technology" className="hover:text-blue-400">Technology</Link>
-  <Link href="/mission" className="hover:text-blue-400">Mission</Link>
-</nav>
+          <nav className="flex space-x-6 text-sm uppercase tracking-wide">
+            <Link href="/" className="text-white hover:text-blue-400">
+              Home
+            </Link>
+            <Link href="/technology" className="text-white hover:text-blue-400">
+              Technology
+            </Link>
+            <Link href="/mission" className="text-white hover:text-blue-400">
+              Mission
+            </Link>
+          </nav>
         </header>
 
         {/* Main content */}
