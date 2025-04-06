@@ -1,10 +1,11 @@
-// src/app/layout.tsx
+'use client'
 
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize(); // run once on load
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <html lang="en">
       <body className={`${inter.className} bg-black text-white`}>
@@ -39,31 +49,27 @@ export default function RootLayout({
 
         {/* Hero Section */}
         <section className="relative w-full h-screen overflow-hidden">
-          {/* Mobile Video (only below md) */}
-          <div className="absolute inset-0 block md:hidden pointer-events-none z-0">
+          {isMobile ? (
             <video
               autoPlay
               muted
               loop
               playsInline
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover absolute top-0 left-0 z-0"
             >
               <source src="/videos/Hero-Mobile.mp4" type="video/mp4" />
             </video>
-          </div>
-
-          {/* Desktop Video (only md and up) */}
-          <div className="absolute inset-0 hidden md:block pointer-events-none z-0">
+          ) : (
             <video
               autoPlay
               muted
               loop
               playsInline
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover absolute top-0 left-0 z-0"
             >
               <source src="/videos/hero.mp4" type="video/mp4" />
             </video>
-          </div>
+          )}
         </section>
 
         {/* Main content */}
