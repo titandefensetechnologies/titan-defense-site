@@ -1,4 +1,4 @@
-// app/layout.tsx
+// src/app/layout.tsx
 
 import "./globals.css";
 import type { Metadata } from "next";
@@ -20,9 +20,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
       <body className={`${inter.className} bg-black text-white`}>
         {/* Header */}
         <header className="w-full py-4 flex flex-col items-center justify-center bg-black z-50">
@@ -41,31 +38,31 @@ export default function RootLayout({
         </header>
 
         {/* Hero Section */}
-<section className="relative w-full h-screen overflow-hidden">
-  {/* Desktop video (md and up) */}
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="hidden md:block absolute top-0 left-0 w-full h-full object-cover z-0"
-  >
-    <source src="/videos/hero.mp4" type="video/mp4" />
-  </video>
+        <section className="relative w-full h-screen overflow-hidden">
+          {/* Mobile Video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="block md:hidden w-full h-full object-cover absolute top-0 left-0"
+          >
+            <source src="/videos/Hero-Mobile.mp4" type="video/mp4" />
+          </video>
 
-  {/* Mobile video (below md) */}
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="block md:hidden absolute top-0 left-0 w-full h-full object-cover z-0"
-  >
-    <source src="/videos/hero-mobile.mp4" type="video/mp4" />
-  </video>
-</section>
+          {/* Desktop Video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="hidden md:block w-full h-full object-cover absolute top-0 left-0"
+          >
+            <source src="/videos/hero.mp4" type="video/mp4" />
+          </video>
+        </section>
 
-        {/* Main Content */}
+        {/* Main content */}
         <main>{children}</main>
 
         {/* Footer */}
