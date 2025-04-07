@@ -24,7 +24,7 @@ export default function RootLayout({
       <header className="w-full py-4 flex flex-col items-center justify-center bg-black z-50">
         <Image
           src="/images/logo.png"
-          alt="Titan Defense Logo"
+          alt="Titan Defense Technologies Logo"
           width={240}
           height={80}
           className="mb-2 object-contain"
