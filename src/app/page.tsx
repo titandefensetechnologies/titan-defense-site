@@ -1,3 +1,5 @@
+// Force redeploy: final conflict resolution
+
 export default function HomePage() {
   return (
     <section className="relative z-10 w-full h-screen">
