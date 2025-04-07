@@ -1,18 +1,17 @@
-'use client';
-// Force deploy: using hero-mobile.mp4
+// src/app/page.tsx
+// Trigger deploy: restoring hero.mp4 from 22756bc
 
 export default function HomePage() {
   return (
     <section className="relative z-10 w-full h-screen">
       <video
+        className="w-full h-full object-cover"
+        src="/videos/hero-mobile.mp4"
         autoPlay
-        muted
         loop
+        muted
         playsInline
-        className="w-full h-full object-cover absolute top-0 left-0"
-      >
-        <source src="/videos/hero-mobile.mp4" type="video/mp4" />
-      </video>
+      />
     </section>
   );
 }
