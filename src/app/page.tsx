@@ -2,32 +2,37 @@
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden">
-      {/* Video Background */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="w-full h-screen object-cover absolute top-0 left-0 z-0"
-      >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-screen px-4 text-center">
+    <main className="relative w-full bg-black text-white">
+      {/* Logo at the Top */}
+      <div className="flex justify-center items-center py-6">
         <img
           src="/images/logo.png"
           alt="Titan Defense Technologies Logo"
-          className="w-48 md:w-64 mb-6"
+          className="w-48 md:w-64"
         />
-        <h1 className="text-2xl md:text-4xl font-bold">
-          Canadian Military Innovation
-        </h1>
-        <p className="mt-2 text-base md:text-lg">
-          Tactical Systems. Battlefield Comms. Combat Wearables.
-        </p>
+      </div>
+
+      {/* Navigation Links */}
+      <nav className="flex justify-center space-x-6 mb-8 text-lg font-semibold">
+        <a href="/" className="hover:text-gray-300">Home</a>
+        <a href="/technology" className="hover:text-gray-300">Technology</a>
+        <a href="/mission" className="hover:text-gray-300">Mission</a>
+      </nav>
+
+      {/* Hero Video */}
+      <div className="relative w-full max-w-6xl mx-auto px-4 mb-12">
+        <div className="relative overflow-hidden rounded-2xl shadow-lg">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-auto object-cover"
+          >
+            <source src="/videos/hero.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </main>
   );
