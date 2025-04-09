@@ -10,9 +10,9 @@ export default function HomePage() {
         <img
           src="/images/logo.png"
           alt="Titan Defense Technologies Logo"
-          className="w-48 md:w-64 mb-4"
+          className="w-96 md:w-[32rem] mb-6" // 2x size
         />
-        <nav className="flex space-x-6 text-white text-lg">
+        <nav className="w-full max-w-4xl flex justify-between text-white text-lg px-8">
           <a href="#">Home</a>
           <a href="#">Technology</a>
           <a href="#">Mission</a>
