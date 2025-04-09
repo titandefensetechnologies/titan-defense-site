@@ -1,6 +1,6 @@
 'use client';
 
-import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic'; 
 import { useEffect, useState } from 'react';
 
 const DesktopLandingPage = dynamic(() => import('@/components/DesktopLandingPage'), { ssr: false });
