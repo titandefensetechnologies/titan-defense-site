@@ -1,14 +1,17 @@
-'use client';
-
-import dynamic from 'next/dynamic';
-
-const HeroClientWrapper = dynamic(() => import('@/components/HeroClientWrapper'), { ssr: false });
-
 export default function HomePage() {
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* Video Background */}
-      <HeroClientWrapper />
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="w-full h-screen object-cover absolute top-0 left-0 z-0"
+      >
+        <source src="/videos/hero.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* Overlay Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-screen px-4 text-center">
