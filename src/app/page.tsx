@@ -5,17 +5,17 @@ export default function HomePage() {
     <main className="flex flex-col min-h-screen bg-black text-white relative overflow-hidden">
 
       {/* HEADER */}
-      <header className="py-2 flex flex-col items-center justify-start z-10 relative bg-black">
+      <header className="py-4 md:py-2 flex flex-col items-center justify-start z-10 relative bg-black">
         {/* Logo */}
         <img
           src="/images/logo.png"
           alt="Titan Defense Technologies Logo"
-          className="w-96 md:w-[25rem] -mb-10"
+          className="w-72 md:w-[25rem] mt-4 mb-6 md:-mb-10"
         />
-        
+
         {/* Navigation */}
-        <nav className="-mt-1 mb-4">
-          <ul className="flex flex-wrap justify-center gap-14 text-white text-lg md:text-xl font-normal">
+        <nav className="mb-6 md:mb-4">
+          <ul className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-14 text-white text-lg md:text-xl font-normal">
             <li><a href="#home" className="hover:text-gray-400 transition">Home</a></li>
             <li><a href="#technology" className="hover:text-gray-400 transition">Technology</a></li>
             <li><a href="#mission" className="hover:text-gray-400 transition">Mission</a></li>
