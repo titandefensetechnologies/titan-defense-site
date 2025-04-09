@@ -1,14 +1,28 @@
-
 export default function HomePage() {
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center">
-      <img src="/images/logo.png" alt="Titan Logo" className="h-48 mb-4" />
-      <video autoPlay loop muted playsInline className="w-full max-w-4xl">
-        <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
-      <footer className="mt-10 text-sm text-gray-500">
-        © 2025 Titan Defense Technologies. All rights reserved.
-      </footer>
-    </div>
-  )
+    <main className="flex flex-col items-center justify-center w-full">
+      {/* Hero Video Section */}
+      <div className="w-full relative">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-[100vh] object-cover"
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      {/* Placeholder for Coming Sections */}
+      <section className="text-center py-10 px-6 max-w-4xl">
+        <h1 className="text-4xl font-bold mb-4">Welcome to Titan Defense Technologies</h1>
+        <p className="text-lg text-gray-300">
+          Canadian military innovation built for tomorrow's battlefield. From smart wearables
+          to resilient communication systems, we command the edge.
+        </p>
+      </section>
+    </main>
+  );
 }
