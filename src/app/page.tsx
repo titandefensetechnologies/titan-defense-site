@@ -1,65 +1,67 @@
-'use client'
+'use client';
 
-import Image from 'next/image'
-import Link from 'next/link'
+import React from 'react';
 
 export default function HomePage() {
   return (
-    <div className="relative flex flex-col min-h-screen bg-black text-white overflow-hidden">
-      {/* Hero video */}
+    <main className="relative min-h-screen overflow-hidden bg-black text-white">
+      {/* HEADER */}
+      <header className="relative z-10 flex flex-col items-center py-6">
+        <img
+          src="/images/logo.png"
+          alt="Titan Defense Technologies Logo"
+          className="w-48 md:w-64 mb-4"
+        />
+        <nav className="flex space-x-6 text-white text-lg">
+          <a href="#">Home</a>
+          <a href="#">Technology</a>
+          <a href="#">Mission</a>
+        </nav>
+      </header>
+
+      {/* VIDEO */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover -z-0"
+        className="w-full h-[80vh] object-cover"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      {/* Header */}
-      <header className="pt-8 flex flex-col items-center z-10">
-        <Image
-          src="/images/logo.png"
-          alt="Titan Defense Technologies Logo"
-          width={160}
-          height={160}
-          className="mb-2"
-        />
-        <nav className="flex space-x-8 text-sm md:text-base">
-          <Link href="/" className="hover:text-gray-300">HOME</Link>
-          <Link href="/technology" className="hover:text-gray-300">TECHNOLOGY</Link>
-          <Link href="/mission" className="hover:text-gray-300">MISSION</Link>
-        </nav>
-      </header>
+      {/* FOOTER */}
+      <footer className="relative z-10 bg-black text-white text-center py-10">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+          {/* Helpful Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">HELPFUL LINKS</h3>
+            <ul className="space-y-2">
+              <li><a href="#">What We Do</a></li>
+              <li><a href="#">Our Capabilities</a></li>
+              <li><a href="#">Our Products</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Media Relations</a></li>
+            </ul>
+          </div>
 
-      {/* Spacer to keep hero centered */}
-      <div className="flex-grow" />
-
-      {/* Footer */}
-      <footer className="w-full px-6 py-10 bg-black bg-opacity-80 backdrop-blur text-sm text-gray-300 z-10">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between">
-          <ul className="mb-6 md:mb-0 text-center md:text-left">
-            <li className="font-semibold text-white mb-2">HELPFUL LINKS</li>
-            <li className="hover:text-white cursor-pointer">What We Do</li>
-            <li className="hover:text-white cursor-pointer">Our Capabilities</li>
-            <li className="hover:text-white cursor-pointer">Our Products</li>
-            <li className="hover:text-white cursor-pointer">Media Relations</li>
-          </ul>
-          <ul className="text-center md:text-right">
-            <li className="font-semibold text-white mb-2">CONTACT US</li>
-            <li className="hover:text-white cursor-pointer">Suppliers</li>
-            <li className="hover:text-white cursor-pointer">Employees</li>
-            <li className="hover:text-white cursor-pointer">FAQs</li>
-            <li className="hover:text-white cursor-pointer">Careers</li>
-            <li className="hover:text-white cursor-pointer">Search Open Positions</li>
-          </ul>
+          {/* Contact Us */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">CONTACT US</h3>
+            <ul className="space-y-2">
+              <li><a href="#">Suppliers</a></li>
+              <li><a href="#">Employees</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Search Open Positions</a></li>
+            </ul>
+          </div>
         </div>
-        <div className="text-center text-xs mt-6 border-t border-gray-700 pt-4">
+        <div className="mt-8 border-t border-gray-600 pt-4 text-sm">
           © 2025 Titan Defense Technologies. All rights reserved.
         </div>
       </footer>
-    </div>
-  )
+    </main>
+  );
 }
