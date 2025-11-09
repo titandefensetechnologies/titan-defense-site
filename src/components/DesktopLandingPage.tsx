@@ -86,7 +86,7 @@ export default function DesktopLandingPage() {
             Built to Protect. Designed to Lead.
           </h2>
           <p className="mt-2 text-sm md:text-base opacity-90 leading-relaxed">
-            AI-powered safety technology keeping underground workers connected and alive—where others fail.
+            AI-powered safety technology keeping underground workers connected and alive - where others fail.
           </p>
         </div>
       </section>

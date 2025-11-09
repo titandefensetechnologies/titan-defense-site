@@ -132,7 +132,7 @@ export default function MobileLandingPage() {
       Built to Protect. Designed to Lead.
     </h2>
     <p className="text-sm sm:text-base mt-2 text-gray-300 max-w-md mx-auto leading-snug">
-AI-powered safety technology keeping underground workers connected and alive—where others fail.
+AI-powered safety technology keeping underground workers connected and alive - where others fail.
     </p>
   </div>
 </section>
