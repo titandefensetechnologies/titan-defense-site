@@ -1,8 +1,27 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Desktop / default */
 body {
-  @apply bg-black text-white font-sans;
+  background-color: #000;
+  background-image: url('/images/wp5317953.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ✅ Phones: use your mobile wallpaper + shift it down a bit */
+@media (max-width: 767px) {
+  body {
+    background-image: url('/images/mobile-bg.png');
+    background-size: contain;   /* keeps full image visible */
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-color: #000;     /* fills leftover space */
+  }
 }

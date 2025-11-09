@@ -1,24 +1,16 @@
-'use client';
+// src/app/page.tsx
+import DesktopLandingPage from '../components/DesktopLandingPage';
+import MobileLandingPage from '../components/MobileLandingPage';
 
-import dynamic from 'next/dynamic'; 
-import { useEffect, useState } from 'react';
-
-const DesktopLandingPage = dynamic(() => import('@/components/DesktopLandingPage'), { ssr: false });
-const MobileLandingPage = dynamic(() => import('@/components/MobileLandingPage'), { ssr: false });
-
-export default function HomePage() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkScreen = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkScreen();
-    window.addEventListener('resize', checkScreen);
-
-    return () => window.removeEventListener('resize', checkScreen);
-  }, []);
-
-  return isMobile ? <MobileLandingPage /> : <DesktopLandingPage />;
+export default function Page() {
+  return (
+    <>
+      <div className="hidden md:block">
+        <DesktopLandingPage />
+      </div>
+      <div className="md:hidden">
+        <MobileLandingPage />
+      </div>
+    </>
+  );
 }
