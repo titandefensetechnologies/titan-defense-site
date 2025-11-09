@@ -5,21 +5,24 @@ import Image from 'next/image';
 export default function DesktopLandingPage() {
   // tweak these
   const BG_SHIFT = '-130px';  // negative moves UP, positive moves DOWN
-  const BG_ZOOM_BASE = 0.95;  // base scale; animation will gently go a bit above this
+  const BG_ZOOM_BASE = 0.95; // base scale; animation will gently go a bit above this
 
   return (
     <main className="relative min-h-screen text-white overflow-hidden bg-black">
       {/* === Fixed Background Layer === */}
-      <div className="fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
+      <div className="fixed inset-0 z-0 overflow-hidden" aria-hidden>
         <div
           className="absolute left-0 right-0 top-0 h-[140vh]"
           style={{
-            transform: `translateY(${BG_SHIFT})`,
+            transform: `translateY(${BG_SHIFT})`, // translate stays on parent
             transformOrigin: 'center center',
           }}
         >
           {/* zoom animation runs on this child; base scale set inline */}
-          <div className="w-screen h-full bg-zoom" style={{ transform: `scale(${BG_ZOOM_BASE})` }}>
+          <div
+            className="w-screen h-full bg-zoom"
+            style={{ transform: `scale(${BG_ZOOM_BASE})` }}
+          >
             <div
               className="w-screen h-full bg-no-repeat bg-cover bg-center"
               style={{ backgroundImage: "url('/images/wp5317953.jpg')" }}
@@ -29,54 +32,56 @@ export default function DesktopLandingPage() {
       </div>
 
       {/* Overlay */}
-      <div className="fixed inset-0 z-10 bg-black/60" aria-hidden="true" />
+      <div className="fixed inset-0 z-10 bg-black/60" aria-hidden />
 
-      {/* === Header === */}
-      <header className="absolute top-0 left-0 right-0 h-24 bg-black z-40 flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
-        <nav aria-label="Primary">
-          <ul className="flex items-center gap-16 md:gap-20 text-lg md:text-xl font-semibold tracking-[0.25em] uppercase">
-            {[
-              { href: '#vigil-md', label: 'Vigil-MD' },
-              { href: '#vigil-link', label: 'Vigil-Link' },
-              { href: '#about', label: 'About Us' },
-              { href: '#contact', label: 'Contact' },
-            ].map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  className="relative hover:text-red-500 transition-colors duration-200
-                             after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
-                             after:bg-red-500 after:transition-[width] after:duration-300 hover:after:w-full
-                             focus:outline-none focus-visible:ring-2 ring-red-500/60 ring-offset-2 ring-offset-black"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
+      {/* Header */}
+{/* Header */}
+<header className="absolute top-0 left-0 right-0 h-24 bg-black z-40 flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
+  <nav aria-label="Primary">
+    <ul className="flex items-center gap-16 md:gap-20 text-lg md:text-xl font-semibold tracking-[0.25em] uppercase">
+      {[
+        { href: '#vigil-md', label: 'Vigil-MD' },
+        { href: '#vigil-link', label: 'Vigil-Link' },
+        { href: '#about', label: 'About Us' },
+        { href: '#contact', label: 'Contact' },
+      ].map((item) => (
+        <li key={item.href}>
+          <a
+            href={item.href}
+            className="relative hover:text-red-500 transition-colors duration-200
+                       after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                       after:bg-red-500 after:transition-[width] after:duration-300 hover:after:w-full
+                       focus:outline-none focus-visible:ring-2 ring-red-500/60 ring-offset-2 ring-offset-black"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
 
-      {/* === Logo (centered block) === */}
-      <div className="grid grid-cols-3 items-center h-32 sm:h-36">
-        <div />
-        <div className="justify-self-center flex items-center justify-center">
-          {/* Bigger, preserved aspect ratio */}
-          <div className="relative w-80 h-24 sm:w-96 sm:h-28">
-            <Image
-              src="/images/logo.png"
-              alt="Titan Defense Technologies"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
-        {/* hamburger stays the same */}
-        <div />
-      </div>
 
-      {/* === Hero Video === */}
+
+      {/* Logo */}
+<div className="grid grid-cols-3 items-center h-32 sm:h-36">  {/* was h-28 */}
+  <div />
+  <div className="justify-self-center flex items-center justify-center">
+    {/* BIGGER, still object-contain so it won't distort */}
+    <div className="relative w-80 h-24 sm:w-96 sm:h-28">    {/* was w-64 h-20 */}
+      <Image
+        src="/images/logo.png"
+        alt="Titan Defense Technologies"
+        fill
+        className="object-contain"
+        priority
+      />
+    </div>
+  </div>
+  <!-- hamburger stays the same -->
+</div>
+
+      {/* Hero Video */}
       <section
         className="relative z-20 flex items-center justify-center min-h-screen"
         style={{ paddingTop: '7rem', paddingBottom: '5rem' }}
@@ -92,12 +97,12 @@ export default function DesktopLandingPage() {
         </div>
       </section>
 
-      {/* === Footer === */}
-      <footer className="absolute bottom-0 left-0 right-0 h-20 bg-transparent z-40 grid place-items-center">
-        <p className="text-[12px] tracking-wider opacity-80 text-center leading-none">
-          © 2025 TITAN DEFENSE TECHNOLOGIES. ALL RIGHTS RESERVED.
-        </p>
-      </footer>
+      {/* Footer */}
+<footer className="absolute bottom-0 left-0 right-0 h-20 bg-transparent z-40 grid place-items-center">
+  <p className="text-[12px] tracking-wider opacity-80 text-center leading-none">
+    © 2025 TITAN DEFENSE TECHNOLOGIES. ALL RIGHTS RESERVED.
+  </p>
+</footer>
     </main>
   );
 }

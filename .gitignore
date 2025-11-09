@@ -25,3 +25,4 @@ out/
 *.log
 titan-defense-site.bfg-report/
 *.heic
+.vercel
