@@ -62,10 +62,9 @@ export default function DesktopLandingPage() {
       </header>
 
       {/* === Logo Section === */}
-      <div className="grid grid-cols-3 items-center h-32 sm:h-36">
+      <div className="relative z-30 grid grid-cols-3 items-center h-32 sm:h-36 px-8">
         <div />
         <div className="justify-self-center flex items-center justify-center">
-          {/* BIGGER, still object-contain so it won't distort */}
           <div className="relative w-80 h-24 sm:w-96 sm:h-28">
             <Image
               src="/images/logo.png"
@@ -81,16 +80,22 @@ export default function DesktopLandingPage() {
 
       {/* === Hero Video === */}
       <section
-        className="relative z-20 flex items-center justify-center min-h-screen"
-        style={{ paddingTop: '7rem', paddingBottom: '5rem' }}
+        className="relative z-20 flex flex-col items-center justify-center min-h-screen"
+        style={{ paddingTop: '8rem', paddingBottom: '6rem' }}
       >
-        <div className="relative w-[60vw] max-w-[960px] bg-black/30 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.7)] ring-1 ring-white/10">
-          <video autoPlay loop muted playsInline className="w-full h-auto object-contain">
+        <div className="relative w-[65vw] max-w-[1000px] bg-black/40 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.7)] ring-1 ring-white/10">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-contain"
+          >
             <source src="/videos/mine-hero.mp4" type="video/mp4" />
           </video>
 
           {/* Soft fade overlays */}
-          <div className="pointer-events-none absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/60 to-transparent" />
+          <div className="pointer-events-none absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/70 to-transparent" />
           <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/80 to-transparent" />
         </div>
       </section>
