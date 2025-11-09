@@ -1,35 +1,27 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
 
 export default function DesktopLandingPage() {
-  // tweak these
-  const BG_SHIFT = '-130px';  // negative moves UP, positive moves DOWN
-  const BG_ZOOM_BASE = 0.95;  // base scale; animation will gently go a bit above this
+  const BG_SHIFT = '-160px'; // background upward shift
+  const BG_ZOOM_BASE = 0.95;
 
   return (
     <main className="relative min-h-screen text-white overflow-hidden bg-black">
       {/* === Fixed Background Layer === */}
-      <div className="fixed inset-0 z-0 overflow-hidden" aria-hidden>
-        <div
-          className="absolute left-0 right-0 top-0 h-[140vh]"
+      <div className="fixed inset-0 z-0 flex items-end justify-center bg-black" aria-hidden>
+        <Image
+          src="/images/wp5317953.png"
+          alt="Titan Defense Background"
+          fill
+          className="object-cover object-bottom"
+          priority
           style={{
-            transform: `translateY(${BG_SHIFT})`, // translate stays on parent
-            transformOrigin: 'center center',
+            width: '100%',
+            height: 'auto',
+            maxHeight: 'calc(100vh - 5rem)', // stays flush with top of footer
           }}
-        >
-          {/* zoom animation runs on this child; base scale set inline */}
-          <div
-            className="w-screen h-full bg-zoom"
-            style={{ transform: `scale(${BG_ZOOM_BASE})` }}
-          >
-            <div
-              className="w-screen h-full bg-no-repeat bg-cover bg-center"
-              style={{ backgroundImage: "url('/images/wp5317953.jpg')" }}
-            />
-          </div>
-        </div>
+        />
       </div>
 
       {/* === Overlay === */}
@@ -61,47 +53,46 @@ export default function DesktopLandingPage() {
         </nav>
       </header>
 
-      {/* === Logo Section === */}
-      <div className="relative z-30 grid grid-cols-3 items-center h-32 sm:h-36 px-8">
-        <div />
-        <div className="justify-self-center flex items-center justify-center">
-          <div className="relative w-80 h-24 sm:w-96 sm:h-28">
-            <Image
-              src="/images/logo.png"
-              alt="Titan Defense Technologies"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
-        {/* hamburger stays the same */}
+      {/* === Logo (Higher + Larger) === */}
+      <div className="absolute -top-6 left-8 z-50">
+        <Image
+          src="/images/logo.png"
+          alt="Titan Defense Technologies"
+          width={1200}
+          height={1200}
+          className="w-auto h-72 md:h-80 lg:h-88 drop-shadow-[0_16px_36px_rgba(0,0,0,0.55)]"
+          priority
+        />
       </div>
 
-      {/* === Hero Video === */}
+      {/* === Hero Video + Caption === */}
       <section
         className="relative z-20 flex flex-col items-center justify-center min-h-screen"
-        style={{ paddingTop: '8rem', paddingBottom: '6rem' }}
+        style={{ paddingTop: '5rem', paddingBottom: '5rem' }} // moved up slightly
       >
-        <div className="relative w-[65vw] max-w-[1000px] bg-black/40 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.7)] ring-1 ring-white/10">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-contain"
-          >
+        <div className="relative w-[60vw] max-w-[960px] bg-black/30 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.7)] ring-1 ring-white/10">
+          <video autoPlay loop muted playsInline className="w-full h-auto object-contain">
             <source src="/videos/mine-hero.mp4" type="video/mp4" />
           </video>
 
           {/* Soft fade overlays */}
-          <div className="pointer-events-none absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/70 to-transparent" />
+          <div className="pointer-events-none absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/60 to-transparent" />
           <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/80 to-transparent" />
+        </div>
+
+        {/* Caption (same as mobile) */}
+        <div className="mt-8 text-center max-w-2xl mx-auto px-4">
+          <h2 className="text-xl md:text-2xl font-semibold tracking-wide">
+            Built to Protect. Designed to Lead.
+          </h2>
+          <p className="mt-2 text-sm md:text-base opacity-90 leading-relaxed">
+            AI-powered safety technology keeping underground workers connected and alive—where others fail.
+          </p>
         </div>
       </section>
 
       {/* === Footer === */}
-      <footer className="absolute bottom-0 left-0 right-0 h-20 bg-transparent z-40 grid place-items-center">
+      <footer className="absolute bottom-0 left-0 right-0 h-20 bg-black z-40 grid place-items-center">
         <p className="text-[12px] tracking-wider opacity-80 text-center leading-none">
           © 2025 TITAN DEFENSE TECHNOLOGIES. ALL RIGHTS RESERVED.
         </p>
