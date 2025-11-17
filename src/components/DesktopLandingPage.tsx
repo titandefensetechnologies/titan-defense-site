@@ -9,18 +9,19 @@ export default function DesktopLandingPage() {
   return (
     <main className="relative min-h-screen text-white overflow-hidden bg-black">
       {/* === Fixed Background Layer === */}
-      <div className="fixed inset-0 z-0 flex items-end justify-center bg-black" aria-hidden>
+      <div
+        className="fixed inset-0 z-0 flex items-end justify-center bg-black overflow-hidden"
+        aria-hidden
+        style={{
+          maxHeight: 'calc(100vh - 5rem)', // stays flush with top of footer
+        }}
+      >
         <Image
           src="/images/wp5317953.png"
           alt="Titan Defense Background"
           fill
           className="object-cover object-bottom"
           priority
-          style={{
-            width: '100%',
-            height: 'auto',
-            maxHeight: 'calc(100vh - 5rem)', // stays flush with top of footer
-          }}
         />
       </div>
 
@@ -80,13 +81,13 @@ export default function DesktopLandingPage() {
           <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/80 to-transparent" />
         </div>
 
-        {/* Caption (same as mobile) */}
+        {/* Caption */}
         <div className="mt-8 text-center max-w-2xl mx-auto px-4">
           <h2 className="text-xl md:text-2xl font-semibold tracking-wide">
             Built to Protect. Designed to Lead.
           </h2>
           <p className="mt-2 text-sm md:text-base opacity-90 leading-relaxed">
-            AI-powered safety technology keeping underground workers connected and alive - where others fail.
+            Real-time safety intelligence for the world’s most dangerous environments - when everything goes dark, VIGIL-MD stays online.
           </p>
         </div>
       </section>
